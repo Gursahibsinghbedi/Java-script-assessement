@@ -14,12 +14,12 @@ const NFTs = [];
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function mintNFT(_name, _price, _owners, _publishingyear) {
+function mintNFT(_name, _age, _height, _bodyweight) {
     const NFT = {
         "name": _name,
-        "price": _price,
-        "owners": _owners,
-        "publishingyear": _publishingyear
+        "age": _age,
+        "height": _height,
+        "bodyweight": _bodyweight
     }
     NFTs.push(NFT);
     console.log("Minted: " + _name);
@@ -33,9 +33,9 @@ function listNFTs() {
     for (let i = 0; i < NFTs.length; i++) {
         console.log("\nID: " + (i +1) );
         console.log("Name: " + NFTs[i].name);
-        console.log("Price: " + NFTs[i].price);
-        console.log("Owners: " + NFTs[i].owners);
-        console.log("Publishing Year: " + NFTs[i].publishingyear);
+        console.log("age: " + NFTs[i].age);
+        console.log("height: " + NFTs[i].height);
+        console.log("bodyweight: " + NFTs[i].bodyweight);
     
     }
 }
@@ -46,10 +46,10 @@ function getTotalSupply() {
 }
 
 // call your functions below this line
-mintNFT("Ayush", "6000", "Raj", "08/03/2008");
-mintNFT("Aman", "8000", "Ankur", "09/12/2019");
-mintNFT("Nikhil", "4000", "Arun", "19/08/2009");
-mintNFT("Suraj", "1000", "Vicky", "19/12/2013");
+mintNFT("gursahib", "20", "6feet'", "78");
+mintNFT("suraj", "22", "5feet'", "60");
+mintNFT("abhinav", "20", "4feet'", "50");
+mintNFT("arushi", "21", "6feet", "72");
 
 listNFTs();
 getTotalSupply();
